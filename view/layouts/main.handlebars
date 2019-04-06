@@ -1,0 +1,45 @@
+ <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+
+                <h1>Burger World!</h1>
+
+                <input type="text" rows="4">
+                </input>
+                <br>
+                <input type="submit">
+                <p>Please select a burger below</p>
+
+            </div>
+        </div>
+</div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                
+                <h2></h2>Get em while they're hot!</h2>
+
+                <ul>
+                    {{#each burgers}}
+                        {{#unless eaten}}
+                        {{> burgers/burger-block eaten=false}}
+                        {{/unless}}
+                    {{/each}}
+                </ul>
+
+                <h2>Burgers Eaten</h2>
+
+                <ul>
+                    {{#each burgers}}
+                        {{#if devoured}}
+                        {{> burgers/burger-block eaten=true}}
+                        {{/if}}
+                    {{/each}}
+                </ul>
+
+            </div>
+        </div>
+    </div>
