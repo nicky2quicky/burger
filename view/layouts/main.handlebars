@@ -1,45 +1,29 @@
- <div class="container">
-        <div class="row">
-            <div class="col-sm-6 offset-sm-3">
+<!DOCTYPE html>
+<html lang="en">
 
-                <h1>Burger World!</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Delicious Burger Land!</title>
 
-                <input type="text" rows="4">
-                </input>
-                <br>
-                <input type="submit">
-                <p>Please select a burger below</p>
+    <!-- bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
 
-            </div>
-        </div>
-</div>
+    <link rel="stylesheet" type="text/css" href="/assets/css/burger_style.css">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 
+</head>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                
-                <h2></h2>Get em while they're hot!</h2>
+<body>
 
-                <ul>
-                    {{#each burgers}}
-                        {{#unless eaten}}
-                        {{> burgers/burger-block eaten=false}}
-                        {{/unless}}
-                    {{/each}}
-                </ul>
+    {{{ body }}}
 
-                <h2>Burgers Eaten</h2>
+</body>
 
-                <ul>
-                    {{#each burgers}}
-                        {{#if devoured}}
-                        {{> burgers/burger-block eaten=true}}
-                        {{/if}}
-                    {{/each}}
-                </ul>
-
-            </div>
-        </div>
-    </div>
+</html>
